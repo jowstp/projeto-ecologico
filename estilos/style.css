@@ -26,14 +26,15 @@ header > h2 {
 nav > ul {
     display: flex;
     flex-flow: row wrap; 
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: stretch;
     gap: 5px;
     background-color: green;
     border: 2px solid red;
 }
 
 nav > ul > li {
-    flex: 0 0 109px; 
+    flex: 0 0 calc(20% - 6px); 
     border: 2px solid blue;
     padding: 10px;
     list-style: none;
@@ -41,6 +42,7 @@ nav > ul > li {
 }
 
 nav > ul > li > a {
+    display: block;
     text-decoration: none;
     color: white;
 }
