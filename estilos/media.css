@@ -20,10 +20,12 @@
 
     header > div > h1 {
         font-size: 1.6rem;
+        text-align: center;
     }
 
     header > div > h2 {
         font-size: 1.2rem;
+        text-align: center;
     }
 
     /* 🔻 menu embaixo */
@@ -42,5 +44,9 @@
     nav ul li a {
         padding: 12px;
         font-size: 0.9rem;
+    }
+
+    div {
+        display: block;
     }
 }
