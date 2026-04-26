@@ -26,13 +26,14 @@ header > h2 {
 nav > ul {
     display: flex;
     flex-flow: row wrap; 
+    justify-content: center;
     gap: 5px;
     background-color: green;
     border: 2px solid red;
 }
 
 nav > ul > li {
-    flex: 0 1 90px; 
+    flex: 0 0 109px; 
     border: 2px solid blue;
     padding: 10px;
     list-style: none;
