@@ -35,7 +35,7 @@ header>div>h1 {
     font-size: 2rem;
     border-bottom: 2px solid black;
 
-    transition: all 0.15s ease;
+    transition: all 0.2s ease;
 }
 
 header>div>h2 {
@@ -43,11 +43,21 @@ header>div>h2 {
     text-align: left;
     font-size: 1.5rem;
 
-    transition: all 0.15s ease;
+    transition: all 0.2s ease;
 }
 
-header>div>h1:hover,
-header>div>h2:hover {
+/*nomes do trabalho da eletiva*/
+
+header>div>h3 {
+    padding-top: 10px;
+    text-align: left;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;    
+}
+
+header>div>h1:hover, 
+header>div>h2:hover,
+header>div>h3:hover {
     color: #e2e891;
 }
 
@@ -95,7 +105,7 @@ nav>ul>li>a {
 main {
     background-color: #fbffa8;
     margin-top: 0px;
-    padding: 10px;
+    padding: 10px 10px 15px 10px;
 }
 
 section {
@@ -117,15 +127,26 @@ section>p {
     text-align: justify; 
     padding: 5px;
     margin-bottom: 5px;
-    font-size: 1.3em;
+    font-size: 1.1em;
     letter-spacing: 1px;
     text-indent: 30px;
 }
 
 section ul {
+    background-color: #96a054;
+    padding: 10px;
+    border-radius: 10px;
     list-style: disc;
     padding-left: 25px;
     margin: 10px 0;
+
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li::before {
+    content: "➜ ";
+    margin: 10px 5px 0px 7px;
 }
 
 table {
@@ -149,4 +170,12 @@ th {
 td {
     background-color: #c7cc7a;
     font-weight: bold;
+}
+
+/*rodape*/
+
+footer {
+    background-color: rgb(244, 215, 111);
+    text-align: center;
+    padding: 5px 0px;
 }
