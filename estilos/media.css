@@ -1,67 +1,63 @@
-@charset "UTF-8";
-
 @media (max-width: 768px) {
 
-    /* 🔻 HEADER */
+    /* 🔻 HEADER volta ao normal (não fixo) */
     header {
+        position: static; /* remove o fixed */
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 10px;
-        padding: 15px 10px;
+        padding: 12px 8px;
     }
 
     header > div {
         align-items: center;
+        margin: 5px;
     }
 
     header > div > h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     header > div > h2 {
-        font-size: 1.2rem;
-        margin-top: 10px;
+        font-size: 1.1rem;
     }
 
     header > div > h3 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
-    /* 🔻 MENU */
-    nav ul {
+    /* 🔻 MENU: 2 por linha */
+    nav > ul {
         max-width: 100%;
-        padding: 0 10px;
-        gap: 8px;
+        gap: 6px;
+        padding: 0 5px;
     }
 
-    nav ul li {
-        flex: 0 0 100%; /* 1 por linha */
+    nav > ul > li {
+        flex: 0 0 calc(50% - 6px);
     }
 
-    nav ul li a {
-        padding: 14px;
-        font-size: 1rem;
+    nav > ul > li > a {
+        padding: 12px;
+        font-size: 0.9rem;
     }
 
-    /* 🔻 CONTEÚDO */
+    /* 🔻 REMOVE espaço do header fixo */
     main {
-        padding: 5px;
+        margin-top: 0;
+        padding-top: 10px;
     }
 
     section {
-        margin: 8px 5px;
-        padding: 10px;
+        scroll-margin-top: 0;
+        margin: 8px;
     }
 
+    /* 🔻 CONTEÚDO */
     section > h2 {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-
-    section > h3 {
         font-size: 1.1rem;
-        margin-top: 10px;
+        text-align: center;
     }
 
     section > p {
@@ -70,30 +66,80 @@
         text-indent: 15px;
     }
 
-    /* 🔻 LISTAS */
-    section ul {
-        padding: 10px;
-    }
-
     section ul li {
         font-size: 0.95rem;
     }
 
-    section ul li::before {
-        content: "→ ";
-        margin-right: 6px;
-    }
-
-    /* 🔻 TABELA (scroll lateral) */
+    /* 🔻 TABELA RESPONSIVA */
     table {
         display: block;
         overflow-x: auto;
         width: 100%;
-        font-size: 0.9rem;
     }
 
     td, th {
-        padding: 8px;
         font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    /* 🔻 container central (não usa body!) */
+    header,
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* 🔻 header mais equilibrado */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 🔻 menu sempre em uma linha */
+    nav ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul li {
+        flex: 0 1 auto;
+        min-width: 110px;
+        max-width: 140px;
+    }
+
+    nav ul li a {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    /* 🔻 conteúdo centralizado e elegante */
+    section {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    /* 🔻 texto confortável */
+    section>p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    /* 🔻 listas mais organizadas */
+    section ul {
+        max-width: 700px;
+        margin: 10px auto;
+    }
+
+    /* 🔻 tabela bonita e centralizada */
+    table {
+        max-width: 800px;
+        margin: 20px auto;
     }
 }

@@ -20,6 +20,14 @@ header {
     align-items: center;
     background-color: #95a44a;
     padding: 10px;
+    border-bottom: 4px solid #788337;
+
+    /* 🔻 FIXO */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 header>div {
@@ -34,7 +42,6 @@ header>div>h1 {
     text-align: left;
     font-size: 2rem;
     border-bottom: 2px solid black;
-
     transition: all 0.2s ease;
 }
 
@@ -42,20 +49,17 @@ header>div>h2 {
     padding-top: 5px;
     text-align: left;
     font-size: 1.5rem;
-
     transition: all 0.2s ease;
 }
-
-/*nomes do trabalho da eletiva*/
 
 header>div>h3 {
     padding-top: 10px;
     text-align: left;
     font-size: 1.2rem;
-    transition: all 0.2s ease;    
+    transition: all 0.2s ease;
 }
 
-header>div>h1:hover, 
+header>div>h1:hover,
 header>div>h2:hover,
 header>div>h3:hover {
     color: #e2e891;
@@ -97,23 +101,29 @@ nav>ul>li>a {
     text-decoration: none;
     text-align: center;
     color: white;
-
     transition: all 0.5s ease;
 }
 
 /*Conteúdo*/
 main {
     background-color: #fbffa8;
-    margin-top: 0px;
     padding: 10px 10px 15px 10px;
+
+    /* 🔻 espaço pro header fixo */
+    margin-top: 130px;
 }
 
 section {
-    scroll-margin-top: 75px;
+    scroll-margin-top: 130px;
+    max-width: 1250px;
     background-color: #c1d281;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
+}
+
+section#introducao h2 {
+    margin-top: 13px;
 }
 
 section>h2 {
@@ -124,7 +134,7 @@ section>h2 {
 }
 
 section>p {
-    text-align: justify; 
+    text-align: justify;
     padding: 5px;
     margin-bottom: 5px;
     font-size: 1.1em;
@@ -136,17 +146,13 @@ section ul {
     background-color: #96a054;
     padding: 10px;
     border-radius: 10px;
-    list-style: disc;
-    padding-left: 25px;
-    margin: 10px 0;
-
     list-style: none;
-    padding-left: 0;
+    margin: 10px 0;
 }
 
 section ul li::before {
     content: "➜ ";
-    margin: 10px 5px 0px 7px;
+    margin-right: 6px;
 }
 
 table {
@@ -156,7 +162,8 @@ table {
     border-collapse: collapse;
 }
 
-td, th {
+td,
+th {
     padding: 10px;
     font-size: 1.2em;
     border: 2px solid black;
@@ -172,8 +179,12 @@ td {
     font-weight: bold;
 }
 
-/*rodape*/
+/* 🔻 espaço extra só no início */
+#introducao {
+    margin-top: 10px;
+}
 
+/*rodape*/
 footer {
     background-color: rgb(244, 215, 111);
     text-align: center;
